@@ -12,7 +12,7 @@ import { ConferenceData } from '../../providers/conference-data';
 import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
 import { SessionDetailPage } from '../session-detail/session-detail';
 import { UserData } from '../../providers/user-data';
-
+import { MapPage } from '../map/map';
 
 @Component({
   selector: 'page-schedule',
@@ -47,6 +47,9 @@ export class SchedulePage {
   ionViewDidLoad() {
     this.app.setTitle('Schedule');
     this.updateSchedule();
+  }
+  goToMap() {
+    this.navCtrl.push(MapPage);
   }
 
   updateSchedule() {

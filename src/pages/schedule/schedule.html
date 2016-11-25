@@ -32,6 +32,7 @@
 <ion-content>
   <ion-list #scheduleList [hidden]="shownSessions === 0">
 
+    <ion-icon name="arrow-forward" (click)= "goToMap()" >go to map</ion-icon>
     <ion-item-group *ngFor="let group of groups" [hidden]="group.hide">
 
       <ion-item-divider sticky>
